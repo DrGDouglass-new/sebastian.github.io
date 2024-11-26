@@ -1,146 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Website</title>
-    <!-- Importing Google Fonts -->
-    <style>
-    /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap');
-
-/* General Body Styling */
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header and Navigation Styling */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-family: 'Permanent Marker', cursive;
-}
-
-nav a:hover {
-    color: #ff6347;
-}
-
-/* Main Content Section */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-section {
-    background-color: white;
-    width: 80%;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-    font-family: 'Permanent Marker', cursive;
-    color: #333;
-}
-
-p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    section {
-        width: 95%;
-    }
-}
-
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Link to External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Evolve Scripting Edition</title>
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8">
+    <link rel="icon" href="evolved-light.ico" type="images/x-icon" media="(prefers-color-scheme:dark)">
+    <link rel="icon" href="evolved.ico" type="images/x-icon" media="(prefers-color-scheme:light)">
+    <link rel="icon" href="evolved.ico" type="images/x-icon" media="(prefers-color-scheme:no-preference)">
+    <link href="lib/googlelato.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/buefy.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/weather-icons.min.css?ver=1">
+    <link rel="stylesheet" type="text/css" href="evolve/evolve.css?ver=83a9eca7">
+    <script src="lib/jquery-3.5.1.min.js"></script>
+    <script src="lib/vue.min.js"></script>
+    <script src="lib/buefy.min.js"></script>
+    <script src="lib/popper.min.js"></script>
+    <script src="lib/Sortable.min.js"></script>
+    <script src="lib/lodash.min.js"></script>
+    <script src="lib/lz-string.min.js"></script>
+    <script src="lib/PlayFabClientApi.js"></script>
+    <script src="lib/moment.js"></script>
+    <script src="evolve/main.js?ver=83a9eca7" type="module"></script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <style>
+        .loading {
+            text-align: center;
+            margin-top: 10rem;
+        }
+        .lds-dual-ring {
+            display: inline-block;
+            width: 64px;
+            height: 64px;
+        }
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 5rem;
+            height: 5rem;
+            margin: 1px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+            }
+            @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="loading"><div class="lds-dual-ring"></div></div>
 
-    <!-- Main Content Section -->
-    <main>
-        <section id="home">
-            <h1>Welcome to Our Website!</h1>
-            <p>This is a basic example of a website using Flexbox and custom fonts.</p>
-        </section>
-
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Learn more about our company and our mission.</p>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We offer a range of services to help your business grow.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us!</p>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 My Company. All rights reserved.</p>
-    </footer>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CPC46V71CB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CPC46V71CB');
+    </script>
 </body>
 </html>
